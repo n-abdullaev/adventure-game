@@ -2,7 +2,7 @@
 # Date: March 7
 # Chapter 3 – The Wizard’s Choice
 
-def play_chapter3():
+def play_chapter3(player):
     print("Chapter 3: The Wizard’s Choice")
     print("You meet an old wizard.")
     print("Do you trust the wizard or continue alone?")
@@ -10,10 +10,10 @@ def play_chapter3():
 
     if choice == "trust":
         print("The wizard gives you a magical key.")
-        return "key"
+        player.item = "key"
     elif choice == "alone":
         print("You continue alone without help.")
-        return "alone"
+        player.item = "alone"
     else:
-        print("Invalid choice.")
-        return "invalid"
+        print("Invalid choice. You continue alone.")
+        player.item = "alone"
